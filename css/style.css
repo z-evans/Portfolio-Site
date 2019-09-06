@@ -1,0 +1,316 @@
+/* Page CSS */
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--main-grey);
+    scroll-behavior: smooth;
+}
+
+:root {
+  --main-bg: #272727;
+  --main-grey: #747474;
+  --main-green: #14A76C;
+  --main-orange: #FF652F;
+  --main-yellow: #FFE400;
+  --main-light: #FFF;
+  --main-purple: #501E77;
+}
+
+/* a tag css */
+
+a {
+    text-decoration: none;
+}
+
+/* Fonts and Sizing for Text */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+div, a, li, figcaption, p, label {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Flex Box Each Section */
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Flex CSS */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* HEADER STYLE */
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/background/background_home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header > div.head-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 250px;
+  margin: auto;
+  height: 360px;
+  width: 240px;
+  color: var(--main-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+header > div.head-text * {
+  padding: 0;
+  margin: 0;
+}
+
+header > div.head-text h1 {
+  font-size: 92px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+header > div.head-text hr {
+  width: 100px;
+  border-color: var(--main-orange);
+}
+
+header > div.head-text hr.central {
+  align-self: center;
+  border-color: var(--main-yellow);
+}
+
+header > div.head-text hr.right {
+  align-self: flex-end;
+  border-color: var(--main-green);
+}
+
+header > div.head-text h2 {
+  margin-top: 30px;
+  font-weight: lighter;
+}
+
+/*************************************/
+
+header > div.system {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  margin: auto;
+  height: 1px;
+}
+
+header > div.system * {
+  z-index: 10;
+}
+
+header > div.system .central {
+  content: ' ';
+  height: 20px;
+  width: 20px;
+  background: var(--main-grey);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: -5px;
+}
+
+header > div.system .first {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  background: var(--main-green);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  animation: first-rot 3s infinite linear;
+}
+
+header > div.system .first-orbit {
+  content: ' ';
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -66px;
+  left: -71px;
+  z-index: 3;
+}
+
+header > div.system .first-orbit:before {
+  content: ' ';
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header > div.system .second-orbit {
+  content: ' ';
+  height: 302px;
+  width: 302px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -141px;
+  left: -146px;
+  z-index: 2;
+}
+
+header > div.system .second-orbit:before {
+  content: ' ';
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header > div.system .third-orbit {
+  content: ' ';
+  height: 452px;
+  width: 452px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -216px;
+  left: -221px;
+  z-index: 1;
+}
+
+header > div.system .third-orbit:before {
+  content: ' ';
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header > div.system .second {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  background: var(--main-yellow);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  animation: second-rot 7.5s infinite linear;
+}
+
+header > div.system .third {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  background: var(--main-orange);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  animation: third-rot 15s infinite linear;
+}
+
+/* NAVIGATION STYLE */
+
+nav {
+  display: flex;
+  position: fixed;
+  left: 0;
+  width: 60px;
+  z-index: 100;
+  height: 100%;
+  background: #181818;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  width: 100%;
+}
+
+nav li {
+  color: var(--main-grey);
+  font-size: 20px;
+  width: 100%;
+  padding: 15px 0;
+  position: relative;
+}
+
+nav .social li {
+  padding: 7px 0;
+  font-size: 14px;
+}
+
+nav li:hover {
+  transition: 0.3s ease;
+}
+
+nav > .nav-central {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > .social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav #navHome:hover {color: var(--main-orange)} nav #navHome.hover {color: var(--main-orange)}
+nav #navAchievements:hover {color: var(--main-yellow)} nav #navAchievements.hover {color: var(--main-yellow)}
+nav #navWork:hover {color: var(--main-green)} nav #navWork.hover {color: var(--main-green)}
+nav #navProjects:hover {color: var(--main-purple)} nav #navProjects.hover {color: var(--main-purple)}
+nav #navLinked:hover {color: var(--main-orange)}
+nav #navFace:hover {color: var(--main-yellow)}
+nav #navInsta:hover {color: var(--main-green)}
