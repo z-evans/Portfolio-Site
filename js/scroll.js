@@ -1,25 +1,30 @@
 if ($(this).scrollTop() >= 0) {
    $("#navHome").addClass("hover");
 }
-$(window).scroll(function() {
-    $("#navHome").removeClass("hover");
-    $("#navAchievements").removeClass("hover");
-    $("#navProjects").removeClass("hover");
-    $("#navContact").removeClass("hover");
 
-    if ($(this).scrollTop() >= 0) {
-        $("#navHome").addClass("hover");
-    }
-    if ($(this).scrollTop() >= $(".experience").offset().top) {
-        $("#navAchievements").addClass("hover");
-    }
-    if ($(this).scrollTop() >= $(".projects").offset().top) {
-        $("#navProjects").addClass("hover");
-    }
-    if ($(this).scrollTop() >= $(".contact").offset().top) {
-        $("#navContact").addClass("hover");
-    }
-    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-        $("#navContact").addClass("hover");
-    }
+function remove() {
+  $("#navHome").removeClass("hover");
+  $("#navAchievements").removeClass("hover");
+  $("#navProjects").removeClass("hover");
+  $("#navAbout").removeClass("hover");
+}
+
+$(window).scroll(function() {
+  remove();
+  if ($(this).scrollTop() >= 0) {
+    remove();
+    $("#navHome").addClass("hover");
+  }
+  if ($(this).scrollTop() >= $("#achievements").offset().top) {
+    remove();
+    $("#navAchievements").addClass("hover");
+  }
+  if ($(this).scrollTop() >= $("#aboutme").offset().top) {
+    remove();
+    $("#navAbout").addClass("hover");
+  }
+  if ($(this).scrollTop() >= $(".projects").offset().top) {
+    remove();
+    $("#navProjects").addClass("hover");
+  }
 });

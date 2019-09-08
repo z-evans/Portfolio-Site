@@ -40,6 +40,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    width: 100%;
 }
 
 /* Flex CSS */
@@ -61,7 +62,7 @@ main {
 /* HEADER STYLE */
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../assets/background/background_home.jpg);
   background-position: center;
@@ -307,10 +308,119 @@ nav > .social {
   align-items: center;
 }
 
-nav #navHome:hover {color: var(--main-orange)} nav #navHome.hover {color: var(--main-orange)}
-nav #navAchievements:hover {color: var(--main-yellow)} nav #navAchievements.hover {color: var(--main-yellow)}
-nav #navWork:hover {color: var(--main-green)} nav #navWork.hover {color: var(--main-green)}
-nav #navProjects:hover {color: var(--main-purple)} nav #navProjects.hover {color: var(--main-purple)}
-nav #navLinked:hover {color: var(--main-orange)}
-nav #navFace:hover {color: var(--main-yellow)}
-nav #navInsta:hover {color: var(--main-green)}
+nav li:hover {color: var(--main-orange)} nav li.hover {color: var(--main-orange)}
+
+/* Section Styles */
+
+main > section {
+  margin-left: 60px;
+  padding: 50px;
+  position: relative;
+}
+
+main > section > div {
+  max-width: 1200px;
+  width: 100%;
+}
+
+main > section > div > h2 {
+  text-decoration: underline;
+}
+
+/* Achievements Styles */
+
+#achievements::before {
+  content: ' ';
+  width: 77%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #FCF7DE;
+  z-index: -1;
+}
+
+#achievements > div > div {
+  margin-top: 50px;
+  justify-content: flex-start;
+}
+
+#achievements .card {
+  background: #FFDFBA;
+  display: flex;
+  height: 250px;
+  align-items: flex-end;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+#achievements .card img {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  width: 240px;
+}
+
+#achievements .card:last-of-type {
+  margin: 0 25px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 1230px) {
+  #achievements > div > div {
+    justify-content: center;
+  }
+  #achievements .card:last-of-type {
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+}
+
+#achievements .card > div {
+  background: rgba(255, 223, 186, 0.7);
+  z-index: 2;
+  width: 100%;
+}
+
+#achievements .card > div * {
+  margin: 10px;
+}
+
+/* About Me */
+
+#aboutme::before {
+  content: ' ';
+  width: 77%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #DEF3FD;
+  z-index: -1;
+}
+
+#aboutme > div > div {
+  padding: 25px;
+  border: 1px solid #555;
+  margin: 50px 0;
+}
+
+#aboutme > div > div * {
+  margin: 0;
+}
+
+#aboutme .progress {
+  margin-top: 10px;
+  height: 35px;
+  display: flex;
+  text-align: center;
+}
+
+#aboutme .progress p {
+  height: 35px;
+  text-align: center;
+  margin: 0;
+  line-height: 2.2;
+}
