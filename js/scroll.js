@@ -23,7 +23,7 @@ $(window).scroll(function() {
     remove();
     $("#navAbout").addClass("hover");
   }
-  if ($(this).scrollTop() >= $(".projects").offset().top) {
+  if ($(this).scrollTop() >= $("#projects").offset().top) {
     remove();
     $("#navProjects").addClass("hover");
   }

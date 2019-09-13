@@ -111,3 +111,97 @@ Header Animation
 		           rotate(-360deg);
 	}
 }
+
+/* LOAD Animations */
+
+header h1.fadeInTop {animation-delay: 2.2s;}
+header hr.fadeInRight {animation-delay: 2.5s;}
+header hr.central.fadeInRight {animation-delay: 2.7s;}
+header hr.right.fadeInRight {animation-delay: 2.9s;}
+header h2.fadeInBottom {animation-delay: 2.2s;}
+header img.fadeInRight {animation-delay: 2.8s;}
+nav.fadeInLeft {animation-delay: 1s;}
+nav > * {opacity: 0;}
+nav > a.fadeIn {animation-delay: 1.7s;}
+nav > ul.nav-central.fadeIn {animation-delay: 2s;}
+nav > ul.social.fadeIn {animation-delay: 2.2s;}
+header img, header div * {
+  opacity: 0;
+}
+
+.fadeDelay0_5{animation-delay: 0.5s}
+.fadeDelay1{animation-delay: 1s}
+.fadeDelay1_5{animation-delay: 1.5s}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+	from {
+		margin-left: -50px;
+    opacity: 0;
+	}
+	to {
+    margin-left: 0px;
+    opacity: 1;
+	}
+}
+
+.fadeIn {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+	from {
+    opacity: 0;
+	}
+	to {
+    opacity: 1;
+	}
+}
+
+.fadeInTop {
+  animation: fadeInTop 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInTop {
+	from {
+    margin-top: -50px;
+    opacity: 0;
+	}
+	to {
+    margin-top: 0;
+    opacity: 1;
+	}
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+	from {
+    margin-right: -50px;
+    opacity: 0;
+	}
+	to {
+    margin-right: 0;
+    opacity: 1;
+	}
+}
+
+.fadeInBottom {
+  animation: fadeInBottom 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInBottom {
+	from {
+    margin-bottom: -50px;
+    opacity: 0;
+	}
+	to {
+    margin-bottom: 0;
+    opacity: 1;
+	}
+}

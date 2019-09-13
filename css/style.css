@@ -118,6 +118,23 @@ header > div.head-text h2 {
   font-weight: lighter;
 }
 
+@media only screen and (max-width: 1200px) {
+  header img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  header > div.head-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
 /*************************************/
 
 header > div.system {
@@ -486,4 +503,13 @@ main > section > div > h2 {
 #projects .content:hover::before {
   max-width: 500px;
   height: 350px;
+}
+
+@media only screen and (max-width: 1026px) {
+  #projects .content img {
+    margin: 0;
+  }
+  #projects .content:before {
+      max-width: 450px;
+  }
 }
