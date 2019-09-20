@@ -135,6 +135,17 @@ header > div.head-text h2 {
   }
 }
 
+@media only screen and (max-width: 520px) {
+  header > div.head-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 70px;
+    right: 0;
+    margin: auto;
+  }
+}
+
 /*************************************/
 
 header > div.system {
@@ -364,6 +375,12 @@ main > section > div > h2 {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 860px) {
+  main > section {
+    padding: 10px;
+  }
+}
+
 /* Achievements Styles */
 
 #achievements > div > div {
@@ -372,7 +389,8 @@ main > section > div > h2 {
 }
 
 #achievements .card {
-  background: #1E1E1E;
+  background: var(--main-grey);
+  color: var(--main-bg);
   display: flex;
   height: 250px;
   align-items: flex-end;
@@ -406,7 +424,7 @@ main > section > div > h2 {
 }
 
 #achievements .card > div {
-  background: rgba(30, 30, 30, 0.7);
+  background: rgba(115, 115, 115, 0.7);
   z-index: 2;
   width: 100%;
 }
@@ -439,11 +457,19 @@ main > section > div > h2 {
 }
 
 #aboutme .progress p {
+  color: var(--main-bg);
   height: 35px;
   text-align: center;
   margin: 0;
   line-height: 2.2;
-  background: #1E1E1E;
+  background: var(--main-grey);
+}
+
+@media only screen and (max-width: 1026px) {
+  #aboutme > div > div {
+    padding: 10px;
+    border: 1px solid #555;
+  }
 }
 
 /* PROJECT STYLE */
@@ -511,5 +537,43 @@ main > section > div > h2 {
   }
   #projects .content:before {
       max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 762px) {
+  #projects .content {
+    padding: 0;
+    margin: 50px auto;
+  }
+  #projects .content > div {
+    max-width: 300px;
+    padding: 20px 0;
+  }
+  #projects .content {text-align:center;}
+  #projects .content > div h3 {
+    font-size: 30px;
+  }
+  #projects .content > div p {
+    font-size: 16px;
+  }
+  #projects .content:before {
+    max-width: 300px;
+  }
+  #projects .content:hover::before {
+    max-width: 300px;
+    height: 450px;
+  }
+  #projects .content img {
+    max-width: 340px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #projects .content img {
+    display: none;
+  }
+  #projects .content > div {
+    max-width: 100px;
+    padding: 20px 0;
   }
 }
