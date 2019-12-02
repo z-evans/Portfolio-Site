@@ -529,6 +529,18 @@ main > section > div > h2 {
   border: 5px solid var(--main-yellow);
 }
 
+#projects .green:before {
+  border: 5px solid var(--main-green);
+}
+
+#projects .orange:before {
+  border: 5px solid var(--main-orange);
+}
+
+#projects .purple:before {
+  border: 5px solid var(--main-purple);
+}
+
 #projects .content:hover::before {
   max-width: 500px;
   height: 350px;
