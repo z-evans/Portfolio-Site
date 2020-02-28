@@ -139,6 +139,9 @@ header > div.head-text h2 {
 }
 
 @media only screen and (max-width: 520px) {
+  header {
+    overflow: hidden;
+  }
   header > div.head-text {
     position: absolute;
     top: 0;
@@ -563,6 +566,7 @@ main > section > div > h2 {
   #projects .content > div {
     max-width: 300px;
     padding: 20px 0;
+    background: none;
   }
   #projects .content {text-align:center;}
   #projects .content > div h3 {
@@ -576,7 +580,19 @@ main > section > div > h2 {
   }
   #projects .content:hover::before {
     max-width: 300px;
-    height: 450px;
+    height: auto;
+  }
+  #projects .content:hover {
+    color: var(--main-bg);
+  }
+  #projects .content:hover::before {
+    background: var(--main-orange);
+  }
+  #projects .content.yellow:hover::before {
+    background: var(--main-yellow);
+  }
+  #projects .content.green:hover::before {
+    background: var(--main-green);
   }
   #projects .content img {
     max-width: 340px;
@@ -588,7 +604,8 @@ main > section > div > h2 {
     display: none;
   }
   #projects .content > div {
-    max-width: 100px;
-    padding: 20px 0;
+    max-width: 250px;
+    padding: 0;
+    margin: 100px auto;
   }
 }
