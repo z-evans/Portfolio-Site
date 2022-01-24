@@ -11,11 +11,7 @@ body {
 }
 
 :root {
-  --main-green: #14a76c;
-  --main-yellow: #ffe400;
   --main-light: #fff;
-  --main-purple: #501e77;
-
   --main-text: #1f1f1f;
   --main-grey: #454851;
   --main-bg: #eaf4f4;
@@ -444,25 +440,9 @@ main > section > div > h2 {
   max-width: 400px;
   height: 300px;
   margin: auto;
-  border: 5px solid var(--main-green);
+  border: 5px solid var(--wintergreen-dream);
   z-index: -1;
   transition: 0.3s ease;
-}
-
-#projects .yellow:before {
-  border: 5px solid var(--main-yellow);
-}
-
-#projects .green:before {
-  border: 5px solid var(--main-green);
-}
-
-#projects .orange:before {
-  border: 5px solid var(--wintergreen-dream);
-}
-
-#projects .purple:before {
-  border: 5px solid var(--main-purple);
 }
 
 #projects .content:hover::before {
@@ -527,14 +507,6 @@ main > section > div > h2 {
   #projects .content:hover::before {
     background: var(--wintergreen-dream);
     height: 300px;
-  }
-
-  #projects .content.yellow:hover::before {
-    background: var(--main-yellow);
-  }
-
-  #projects .content.green:hover::before {
-    background: var(--main-green);
   }
 
   #projects .content img {
