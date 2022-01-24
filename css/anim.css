@@ -7,64 +7,78 @@ Loader
 */
 
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
 }
+
 #loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 300;
-    width: 70px;
-    height: 70px;
-    border-style: solid;
-    border-top-color: #FFF;
-    border-right-color: #FFF;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    box-sizing: border-box;
-    animation: rotate 4s ease-in-out infinite;
-    transform: rotate(-45deg)
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 300;
+  width: 70px;
+  height: 70px;
+  border-style: solid;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 4s ease-in-out infinite;
+  transform: rotate(-45deg);
 }
 
 @keyframes rotate {
-    0% { border-width: 10px; }
-    25% { border-width: 3px; }
-    50% {
-      transform: rotate(675deg);
-      border-width: 10px;
-    }
-    75% { border-width: 3px;}
-    100% { border-width: 10px;}
+  0% {
+    border-width: 10px;
+  }
+
+  25% {
+    border-width: 3px;
+  }
+
+  50% {
+    transform: rotate(675deg);
+    border-width: 10px;
+  }
+
+  75% {
+    border-width: 3px;
+  }
+
+  100% {
+    border-width: 10px;
+  }
 }
 
 #ud_preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
 }
+
 #ud_preloader .ud_pre_down {
-    background: #111;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  background: #111;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 /*
@@ -74,78 +88,103 @@ Header Animation
 */
 
 @keyframes first-rot {
-	from {
-		transform: rotate(0deg)
-		           translate(-75px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-75px)
-		           rotate(-360deg);
-	}
+  from {
+    transform: rotate(0deg) translate(-75px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-75px) rotate(-360deg);
+  }
 }
 
 @keyframes second-rot {
-	from {
-		transform: rotate(0deg)
-		           translate(-150px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-150px)
-		           rotate(-360deg);
-	}
+  from {
+    transform: rotate(0deg) translate(-150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-150px) rotate(-360deg);
+  }
 }
 
 @keyframes third-rot {
-	from {
-		transform: rotate(0deg)
-		           translate(-225px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-225px)
-		           rotate(-360deg);
-	}
+  from {
+    transform: rotate(0deg) translate(-225px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-225px) rotate(-360deg);
+  }
 }
 
 /* LOAD Animations */
 
-header h1.fadeInTop {animation-delay: 2.2s;}
-header hr.fadeInRight {animation-delay: 2.5s;}
-header hr.central.fadeInRight {animation-delay: 2.7s;}
-header hr.right.fadeInRight {animation-delay: 2.9s;}
-header h2.fadeInBottom {animation-delay: 2.2s;}
-header img.fadeInRight {animation-delay: 2.8s;}
-nav.fadeInLeft {animation-delay: 1s;}
-nav > * {opacity: 0;}
-nav > a.fadeIn {animation-delay: 1.7s;}
-nav > ul.nav-central.fadeIn {animation-delay: 2s;}
-nav > ul.social.fadeIn {animation-delay: 2.2s;}
-header img, header div * {
-  opacity: 0;
+header h1.fadeInTop {
+  animation-delay: 2.2s;
 }
 
-.fadeDelay0_5{animation-delay: 0.5s}
-.fadeDelay1{animation-delay: 1s}
-.fadeDelay1_5{animation-delay: 1.5s}
+header hr.fadeInRight {
+  animation-delay: 2.5s;
+}
+
+header hr.central.fadeInRight {
+  animation-delay: 2.7s;
+}
+
+header hr.right.fadeInRight {
+  animation-delay: 2.9s;
+}
+
+header h2.fadeInBottom {
+  animation-delay: 2.2s;
+}
+
+header img.fadeInRight {
+  animation-delay: 2.8s;
+}
+
+nav.fadeInLeft {
+  animation-delay: 1s;
+}
+
+nav > a.fadeIn {
+  animation-delay: 1.7s;
+}
+
+nav > ul.nav-central.fadeIn {
+  animation-delay: 2s;
+}
+
+nav > ul.social.fadeIn {
+  animation-delay: 2.2s;
+}
+
+.fadeDelay0_5 {
+  animation-delay: 0.5s;
+}
+
+.fadeDelay1 {
+  animation-delay: 1s;
+}
+
+.fadeDelay1_5 {
+  animation-delay: 1.5s;
+}
 
 .fadeInLeft {
   animation: fadeInLeft 0.7s ease-in-out forwards;
 }
 
 @keyframes fadeInLeft {
-	from {
-		margin-left: -50px;
+  from {
+    margin-left: -50px;
     opacity: 0;
-	}
-	to {
+  }
+
+  to {
     margin-left: 0px;
     opacity: 1;
-	}
+  }
 }
 
 .fadeIn {
@@ -153,12 +192,13 @@ header img, header div * {
 }
 
 @keyframes fadeIn {
-	from {
+  from {
     opacity: 0;
-	}
-	to {
+  }
+
+  to {
     opacity: 1;
-	}
+  }
 }
 
 .fadeInTop {
@@ -166,14 +206,15 @@ header img, header div * {
 }
 
 @keyframes fadeInTop {
-	from {
+  from {
     margin-top: -50px;
     opacity: 0;
-	}
-	to {
+  }
+
+  to {
     margin-top: 0;
     opacity: 1;
-	}
+  }
 }
 
 .fadeInRight {
@@ -181,14 +222,15 @@ header img, header div * {
 }
 
 @keyframes fadeInRight {
-	from {
+  from {
     margin-right: -50px;
     opacity: 0;
-	}
-	to {
+  }
+
+  to {
     margin-right: 0;
     opacity: 1;
-	}
+  }
 }
 
 .fadeInBottom {
@@ -196,12 +238,13 @@ header img, header div * {
 }
 
 @keyframes fadeInBottom {
-	from {
+  from {
     margin-bottom: -50px;
     opacity: 0;
-	}
-	to {
+  }
+
+  to {
     margin-bottom: 0;
     opacity: 1;
-	}
+  }
 }
