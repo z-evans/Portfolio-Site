@@ -1,0 +1,28 @@
+:root {
+  --main-light: #fff;
+  --main-text: #1f1f1f;
+  --main-grey: #454851;
+  --main-bg: #eaf4f4;
+  --light-mint-cream: #f6fff8;
+  --mint-cream: #eaf4f4;
+  --light-cyan: #cce3de;
+  --cambridge-blue: #a4c3b2;
+  --wintergreen-dream: #6b9080;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--main-text);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #eaf4f4 url(../assets/specks.png) repeat 20px 0;
+  scroll-behavior: smooth;
+}
+
+a:link,
+a:visited {
+  color: var(--main-text);
+  text-decoration: none;
+}
