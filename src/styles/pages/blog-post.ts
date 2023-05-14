@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 export const BlogPostSection = styled.div`
   padding: 4em 2em;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
   > div > div.head > img {
     width: 100%;
     margin-top: 1em;

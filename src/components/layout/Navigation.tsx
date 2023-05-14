@@ -18,6 +18,7 @@ import {
   Nav,
   NavItems,
   BurgerMenu,
+  SafeGuard,
 } from "../../styles/component/Navigation";
 
 export interface NavigationItemProps {
@@ -60,6 +61,7 @@ const Navigation: FunctionComponent<PropsWithChildren> = ({ children }) => {
         <BurgerMenu onClick={() => setToggle(!toggle)}>
           <FontAwesomeIcon icon={faBars} />
         </BurgerMenu>
+        <SafeGuard toggle={toggle} onClick={() => setToggle(!toggle)} />
         <Nav toggle={toggle}>
           <NavItems>{items.map(NavigationItem)}</NavItems>
         </Nav>

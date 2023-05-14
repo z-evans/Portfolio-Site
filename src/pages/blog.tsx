@@ -4,6 +4,7 @@ import urls from "../data/urls";
 import { Link } from "react-router-dom";
 import BlogManager, { BlogRecord } from "../manager/BlogManager";
 import { BlogPostProps } from "../types/blog-post";
+import Loader from "../components/Loader";
 
 const BlogItem: FunctionComponent<BlogPostProps> = ({
   name,
@@ -26,14 +27,18 @@ const BlogItem: FunctionComponent<BlogPostProps> = ({
 
 function BlogPage() {
   const [posts, setPosts] = useState<BlogPostProps[]>([]);
-  console.log(posts);
+  const [loading, setLoading] = useState(true);
+
   const getPosts = async () => {
     const result = await BlogManager.list();
     let list: BlogPostProps[] = [];
+
     result.forEach(async (x) =>
       list.push(await BlogManager.pbToWeb(x as unknown as BlogRecord, true))
     );
+
     setPosts(list);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -43,12 +48,18 @@ function BlogPage() {
   return (
     <>
       <BlogSection>
-        <div>
-          <Title>
-            Blog<PSNotice>(Don't expect much...)</PSNotice>
-          </Title>
-          <BlogCards>{posts.map(BlogItem)}</BlogCards>
-        </div>
+        <Title>
+          Blog<PSNotice>(Don't expect much...)</PSNotice>
+        </Title>
+        <Loader isLoading={loading}>
+          <BlogCards>
+            {posts.length > 0 ? (
+              posts.map(BlogItem)
+            ) : (
+              <p>Something has gone wrong...</p>
+            )}
+          </BlogCards>
+        </Loader>
       </BlogSection>
     </>
   );

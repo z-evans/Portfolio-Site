@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 
 export const BlogSection = styled.div`
   padding: 4em 2em;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Title = styled.h2`

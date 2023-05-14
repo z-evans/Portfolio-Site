@@ -30,6 +30,20 @@ export const BasicPageLayout = styled.div`
   }
 `;
 
+export const SafeGuard = styled.div`
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: ${({ toggle }: Toggle) => (toggle ? `100vw` : "0")};
+  height: 100%;
+  z-index: 50;
+
+  @media only screen and (min-width: 1000px) {
+    visibility: hidden;
+  }
+`;
+
 export const BurgerMenu = styled.div`
   background: var(--wintergreen-dream);
   position: fixed;
