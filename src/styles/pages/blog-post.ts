@@ -10,6 +10,10 @@ export const BlogPostSection = styled.div`
     width: 100%;
     margin-top: 1em;
   }
+  > div > div > p.tags {
+    color: var(--cambridge-blue);
+    margin-bottom: 0;
+  }
   > div > div > p.date {
     color: var(--cambridge-blue);
     margin-bottom: 0;
@@ -32,6 +36,17 @@ export const BlogPostSection = styled.div`
     h3 {
       margin-bottom: 0;
     }
+  }
+  .content p,
+  .content h1,
+  .content h2,
+  .content h3 {
+    margin: 0;
+  }
+  .content pre {
+    border: 1px solid var(--wintergreen-dream);
+    padding: 0.5em;
+    overflow-x: auto;
   }
 `;
 

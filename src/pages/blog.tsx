@@ -1,5 +1,12 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import { Title, PSNotice, BlogCards, BlogSection } from "../styles/pages/blog";
+import {
+  Title,
+  PSNotice,
+  BlogCards,
+  BlogSection,
+  BlogCard,
+  BlogDetails,
+} from "../styles/pages/blog";
 import urls from "../data/urls";
 import { Link } from "react-router-dom";
 import BlogManager, { BlogRecord } from "../manager/BlogManager";
@@ -11,16 +18,22 @@ const BlogItem: FunctionComponent<BlogPostProps> = ({
   id,
   image,
   date,
+  expand,
 }) => {
   return (
     <Link to={urls.pages.blogPost(id)} key={id}>
-      <div>
+      <BlogCard>
         <img src={image} alt={name} />
         <div>
           <h3>{name}</h3>
-          <span className="date">{new Date(date).toLocaleDateString()}</span>
+          <BlogDetails>
+            <span className="tags">
+              {(expand?.tags ?? []).map((x) => x.name).join(", ")}
+            </span>
+            <span className="date">{new Date(date).toLocaleDateString()}</span>
+          </BlogDetails>
         </div>
-      </div>
+      </BlogCard>
     </Link>
   );
 };

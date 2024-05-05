@@ -20,16 +20,6 @@ import imgTEAM from "../assets/project/team.png";
 import imgBACK from "../assets/index.png";
 
 export default {
-  replacements: [
-    {
-      id: "h1",
-      replace: "h2",
-    },
-    {
-      id: "h2",
-      replace: "h3",
-    },
-  ],
   images: {
     background: imgBACK,
   },

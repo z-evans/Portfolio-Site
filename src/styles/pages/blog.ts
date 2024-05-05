@@ -40,6 +40,15 @@ export const BlogCards = styled.div`
         color: var(--light-cyan);
         text-align: right;
       }
+      .tags {
+        display: block;
+        color: var(--cambridge-blue);
+        text-align: left;
+        max-width: 190px;
+        overflow-x: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+      }
     }
   }
 
@@ -59,4 +68,14 @@ export const BlogCards = styled.div`
       margin: auto;
     }
   }
+`;
+
+export const BlogCard = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BlogDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

@@ -30,6 +30,9 @@ function BlogPostPage() {
               <div className="head">
                 {!post.hideImage && <img src={post.image} alt={post.name} />}
                 <Title>{post.name}</Title>
+                <p className="tags">
+                  {(post.expand?.tags ?? []).map((x) => x.name).join(", ")}
+                </p>
                 <p className="date">
                   {new Date(post.date).toLocaleDateString()}
                 </p>
@@ -37,7 +40,7 @@ function BlogPostPage() {
               <div
                 className="content"
                 dangerouslySetInnerHTML={{
-                  __html: BlogManager.format(post.description),
+                  __html: post.description,
                 }}
               />
             </div>
