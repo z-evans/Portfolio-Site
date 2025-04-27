@@ -1,22 +1,18 @@
 import { BlogPostProps } from "../types/blog-post";
-import PocketBase, { Record } from "pocketbase";
+import PocketBase from "pocketbase";
 import urls from "../data/urls";
-
-export type BlogRecord = Record;
 
 class BlogManager {
   pb = new PocketBase("https://api.zevans.co.uk");
 
-  async list() {
-    return (
-      await this.pb.collection("posts").getList(1, 6, {
-        sort: "-created",
-        expand: "tags",
-      })
-    ).items;
+  async list(page: number, limit: number) {
+    return await this.pb.collection("posts").getList(page, limit, {
+      sort: "-created",
+      expand: "tags",
+    });
   }
 
-  async pbToWeb(record: Record, thumb: boolean) {
+  async pbToWeb(record: any, thumb: boolean) {
     return {
       name: record.name as string,
       description: record.description as string,
@@ -28,8 +24,8 @@ class BlogManager {
     } as BlogPostProps;
   }
 
-  async getImage(record: Record, thumb: boolean) {
-    return await this.pb.files.getUrl(record, record.image, {
+  async getImage(record: any, thumb: boolean) {
+    return await this.pb.files.getURL(record, record.image, {
       thumb: thumb ? "100x250" : undefined,
     });
   }

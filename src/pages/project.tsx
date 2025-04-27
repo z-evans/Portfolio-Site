@@ -41,7 +41,9 @@ function ProjectPage() {
       <ProjectSection>
         <div>
           <h2>My Projects</h2>
-          <ProjectCards>{content.pages.projects.map(ProjectItem)}</ProjectCards>
+          <ProjectCards>
+            <>{content.pages.projects.map(ProjectItem)}</>
+          </ProjectCards>
         </div>
       </ProjectSection>
     </>

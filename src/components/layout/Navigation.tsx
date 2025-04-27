@@ -63,7 +63,9 @@ const Navigation: FunctionComponent<PropsWithChildren> = ({ children }) => {
         </BurgerMenu>
         <SafeGuard toggle={toggle} onClick={() => setToggle(!toggle)} />
         <Nav toggle={toggle}>
-          <NavItems>{items.map(NavigationItem)}</NavItems>
+          <NavItems>
+            <>{items.map(NavigationItem)}</>
+          </NavItems>
         </Nav>
         <div className="content" onClick={() => setToggle(false)}>
           <div>{children}</div>

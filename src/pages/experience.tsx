@@ -65,7 +65,7 @@ function ExperiencePage() {
         <div>
           <h2>My Achievements</h2>
           <AchievementCards>
-            {content.pages.expierence.achievements.map(AchievementItem)}
+            <>{content.pages.expierence.achievements.map(AchievementItem)}</>
           </AchievementCards>
         </div>
       </section>
@@ -74,7 +74,7 @@ function ExperiencePage() {
         <div>
           <h2>My Education</h2>
           <ExperienceCards>
-            {content.pages.expierence.education.map(EducationItem)}
+            <>{content.pages.expierence.education.map(EducationItem)}</>
           </ExperienceCards>
         </div>
       </section>

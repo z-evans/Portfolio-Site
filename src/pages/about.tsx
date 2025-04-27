@@ -46,7 +46,9 @@ function AboutPage() {
           <h2>Technologies</h2>
           <p>Here is a list of technologies I used when developing:</p>
 
-          <AboutCards>{content.pages.about.tech.map(TechItem)}</AboutCards>
+          <AboutCards>
+            <>{content.pages.about.tech.map(TechItem)}</>
+          </AboutCards>
         </div>
       </section>
     </AboutSection>

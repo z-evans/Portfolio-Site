@@ -108,6 +108,30 @@ export default {
       ],
       education: [
         {
+          name: "MSc, Software Engineering and Artificial Intelligence",
+          location: "University of Wales Trinity Saint David",
+          date: "2024 - 2026",
+          description:
+            "The course focuses on Software Engineering and Artificial Intelligence (AI), integrating hands-on experiences with rigorous academic knowledge, encouraging both technical mastery and lifelong learning, equipping me to excel in evolving technological landscapes.",
+          list: [
+            "Machine Learning Applications",
+            "Artificial Intelligence in Practice",
+            "Data Science and Big Data",
+          ],
+        },
+        {
+          name: "BSc, Computing (Software Engineering)",
+          location: "University of Wales Trinity Saint David",
+          date: "2019 - 2023",
+          description:
+            "The course focuses on designing, implementing, testing and maintenance of high-quality software solutions. The course focuses on acquiring and using the expertise required by a professional programmer to create solutions to large and complex problems.",
+          list: [
+            "Advanced Software Development",
+            "Software Engineering Principles and Testing",
+            "Network Operating Systems and Services",
+          ],
+        },
+        {
           name: "Level 3 Information Technology",
           location: "NPTC Group, Neath College",
           date: "2017 - 2019",
@@ -118,18 +142,6 @@ export default {
             "Website Production",
             "Computer Networking",
             "Computer Games Development",
-          ],
-        },
-        {
-          name: "BE, Computer Software Engineering",
-          location: "University of Wales Trinity Saint David",
-          date: "2019 - 2023",
-          description:
-            "The course focuses on designing, implementing, testing and maintenance of high-quality software solutions. The course focuses on acquiring and using the expertise required by a professional programmer to create solutions to large and complex problems.",
-          list: [
-            "Advanced Software Development",
-            "Software Engineering Principles and Testing",
-            "Network Operating Systems and Services",
           ],
         },
       ],
