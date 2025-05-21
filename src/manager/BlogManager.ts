@@ -1,4 +1,4 @@
-import { BlogPostProps } from "../types/blog-post";
+import { Additional, BlogPostProps } from "../types/blog-post";
 import PocketBase from "pocketbase";
 import urls from "../data/urls";
 
@@ -21,6 +21,7 @@ class BlogManager {
       date: record.created as unknown as Date,
       hideImage: record.hideImage as boolean,
       expand: record.expand as any,
+      additional: record?.additional as Additional,
     } as BlogPostProps;
   }
 

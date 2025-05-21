@@ -8,6 +8,7 @@ export interface BlogPostProps {
   expand?: {
     tags: Tag[];
   };
+  additional?: Additional;
 }
 
 export interface Tag {
@@ -16,4 +17,8 @@ export interface Tag {
   created: string;
   id: string;
   name: string;
+}
+
+export interface Additional {
+  gpx?: string;
 }

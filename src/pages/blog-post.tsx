@@ -5,6 +5,8 @@ import { BlogPostSection, GoBack, Title } from "../styles/pages/blog-post";
 import { BlogPostProps } from "../types/blog-post";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
+import GpxManager from "../manager/GpxManager";
+import { MapContainer, Polyline, TileLayer } from "react-leaflet";
 
 function BlogPostPage() {
   let { id } = useParams();
@@ -14,6 +16,27 @@ function BlogPostPage() {
   const getPost = async () => {
     setPost(await BlogManager.get(id as string));
     setLoading(false);
+  };
+
+  const loadGpx = () => {
+    if (post?.additional?.gpx) {
+      const parser = new DOMParser();
+      const gpx = parser.parseFromString(
+        post?.additional?.gpx,
+        "application/xml"
+      );
+      const { positions, bounds } = GpxManager.basicGpxParse(gpx);
+
+      return (
+        <MapContainer bounds={bounds} style={{ height: "500px" }}>
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <Polyline
+            pathOptions={{ fillColor: "red", color: "blue" }}
+            positions={positions}
+          />
+        </MapContainer>
+      );
+    }
   };
 
   useEffect(() => {
@@ -37,12 +60,15 @@ function BlogPostPage() {
                   {new Date(post.date).toLocaleDateString()}
                 </p>
               </div>
-              <div
-                className="content"
-                dangerouslySetInnerHTML={{
-                  __html: post.description,
-                }}
-              />
+              <div>
+                <div
+                  className="content"
+                  dangerouslySetInnerHTML={{
+                    __html: post.description,
+                  }}
+                ></div>
+                {post.additional?.gpx && loadGpx()}
+              </div>
             </div>
           )}
         </Loader>
